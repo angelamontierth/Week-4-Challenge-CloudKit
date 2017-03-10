@@ -12,19 +12,22 @@
         <!--Contacts-->
         <scene sceneID="BQh-IN-ceb">
             <objects>
-                <tableViewController id="K18-T9-4tT" sceneMemberID="viewController">
+                <tableViewController id="K18-T9-4tT" customClass="ContactListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xyw-y2-yIn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0Te-3C-wo7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" id="0Te-3C-wo7">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Te-3C-wo7" id="Ycd-be-lHI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="F0n-2g-wJj" kind="show" identifier="toShowContact" id="74m-mw-msZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -44,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="1016.8" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact Detail View Controller-->
         <scene sceneID="9Uc-cA-agY">
             <objects>
-                <viewController id="F0n-2g-wJj" sceneMemberID="viewController">
+                <viewController id="F0n-2g-wJj" customClass="ContactDetailViewController" customModule="Week_4_Challenge_CloudKit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="btD-gI-zrg"/>
                         <viewControllerLayoutGuide type="bottom" id="UD9-ed-MYt"/>
@@ -109,8 +112,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Pm7-dE-ib8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="15d-pq-E2m"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="15d-pq-E2m">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="F0n-2g-wJj" id="DtR-pH-pH6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="mqJ-uu-2GT" id="XUo-xU-0CS"/>
+                        <outlet property="nameTextField" destination="noa-oU-LmT" id="5Bb-Fw-4cU"/>
+                        <outlet property="phoneTextField" destination="fAZ-Fc-Mjm" id="hqE-ep-eL1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVj-Mw-hFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,4 +147,7 @@
             <point key="canvasLocation" x="77.599999999999994" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="74m-mw-msZ"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,12 @@
 		C3696C711E731142001EF3A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3696C6F1E731142001EF3A9 /* Main.storyboard */; };
 		C3696C731E731142001EF3A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3696C721E731142001EF3A9 /* Assets.xcassets */; };
 		C3696C761E731142001EF3A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3696C741E731142001EF3A9 /* LaunchScreen.storyboard */; };
+		C3696C821E7317F5001EF3A9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3696C811E7317F5001EF3A9 /* CloudKit.framework */; };
+		C3696C841E7319DD001EF3A9 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3696C831E7319DD001EF3A9 /* ContactListTableViewController.swift */; };
+		C3696C861E731E82001EF3A9 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3696C851E731E82001EF3A9 /* ContactDetailViewController.swift */; };
+		C3696C891E73221F001EF3A9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3696C881E73221F001EF3A9 /* Contact.swift */; };
+		C3696C8C1E7324CE001EF3A9 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3696C8B1E7324CE001EF3A9 /* CloudKitManager.swift */; };
+		C3696C8F1E7330C7001EF3A9 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3696C8E1E7330C7001EF3A9 /* ContactController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,13 @@
 		C3696C721E731142001EF3A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3696C751E731142001EF3A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3696C771E731142001EF3A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3696C7F1E7317F2001EF3A9 /* Week 4 Challenge CloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Week 4 Challenge CloudKit.entitlements"; sourceTree = "<group>"; };
+		C3696C811E7317F5001EF3A9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C3696C831E7319DD001EF3A9 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
+		C3696C851E731E82001EF3A9 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		C3696C881E73221F001EF3A9 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		C3696C8B1E7324CE001EF3A9 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		C3696C8E1E7330C7001EF3A9 /* ContactController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3696C821E7317F5001EF3A9 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +52,7 @@
 			children = (
 				C3696C6A1E731142001EF3A9 /* Week 4 Challenge CloudKit */,
 				C3696C691E731142001EF3A9 /* Products */,
+				C3696C801E7317F5001EF3A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +67,11 @@
 		C3696C6A1E731142001EF3A9 /* Week 4 Challenge CloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				C3696C7F1E7317F2001EF3A9 /* Week 4 Challenge CloudKit.entitlements */,
+				C3696C8D1E7330AC001EF3A9 /* Helper */,
+				C3696C8A1E732242001EF3A9 /* Models */,
+				C3696C901E7330D9001EF3A9 /* Controllers */,
+				C3696C871E732207001EF3A9 /* ViewControllers */,
 				C3696C7D1E73115D001EF3A9 /* Storyboards */,
 				C3696C7E1E731165001EF3A9 /* SupportFiles */,
 			);
@@ -75,6 +95,47 @@
 				C3696C771E731142001EF3A9 /* Info.plist */,
 			);
 			name = SupportFiles;
+			sourceTree = "<group>";
+		};
+		C3696C801E7317F5001EF3A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3696C811E7317F5001EF3A9 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3696C871E732207001EF3A9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3696C831E7319DD001EF3A9 /* ContactListTableViewController.swift */,
+				C3696C851E731E82001EF3A9 /* ContactDetailViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C3696C8A1E732242001EF3A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3696C881E73221F001EF3A9 /* Contact.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C3696C8D1E7330AC001EF3A9 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C3696C8B1E7324CE001EF3A9 /* CloudKitManager.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		C3696C901E7330D9001EF3A9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C3696C8E1E7330C7001EF3A9 /* ContactController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,7 +170,16 @@
 				TargetAttributes = {
 					C3696C671E731142001EF3A9 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2U82FQY8RP;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -149,7 +219,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3696C891E73221F001EF3A9 /* Contact.swift in Sources */,
+				C3696C841E7319DD001EF3A9 /* ContactListTableViewController.swift in Sources */,
+				C3696C8F1E7330C7001EF3A9 /* ContactController.swift in Sources */,
+				C3696C861E731E82001EF3A9 /* ContactDetailViewController.swift in Sources */,
 				C3696C6C1E731142001EF3A9 /* AppDelegate.swift in Sources */,
+				C3696C8C1E7324CE001EF3A9 /* CloudKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +347,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Week 4 Challenge CloudKit/Week 4 Challenge CloudKit.entitlements";
+				DEVELOPMENT_TEAM = 2U82FQY8RP;
 				INFOPLIST_FILE = "Week 4 Challenge CloudKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Week-4-Challenge-CloudKit";
@@ -284,6 +361,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Week 4 Challenge CloudKit/Week 4 Challenge CloudKit.entitlements";
+				DEVELOPMENT_TEAM = 2U82FQY8RP;
 				INFOPLIST_FILE = "Week 4 Challenge CloudKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Week-4-Challenge-CloudKit";
